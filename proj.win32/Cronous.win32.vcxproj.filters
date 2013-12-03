@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="resource">
+      <UniqueIdentifier>{6425d33b-1f4b-4400-87d6-a3cdc416fe75}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;png;manifest</Extensions>
+    </Filter>
+    <Filter Include="classes">
+      <UniqueIdentifier>{db57dfb7-d21a-4c69-b1eb-b2724d96885a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="libs">
+      <UniqueIdentifier>{70951d9f-7c88-47be-9a50-fc4b05b2a70b}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="libs\jsoncpp">
+      <UniqueIdentifier>{c437a340-db7e-42d8-98bc-a6b9fd039121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\jsoncpp\include">
+      <UniqueIdentifier>{0ea0d29e-5dfb-45b0-8757-b8948ebc1584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\jsoncpp\src">
+      <UniqueIdentifier>{203e35e1-f4e3-4d5b-b500-9ae25e59a672}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\jsoncpp\include\json">
+      <UniqueIdentifier>{d5252cf9-6c28-485e-925f-3518b515fd8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\jsoncpp\src\lib_json">
+      <UniqueIdentifier>{41349cd1-8575-411e-8b63-3d0ca7582aca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\Network">
+      <UniqueIdentifier>{679402f7-993a-4ece-8839-aaab31aaff70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\Storage">
+      <UniqueIdentifier>{c920a3de-29f2-48de-8ca1-34da5da9faaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\Util">
+      <UniqueIdentifier>{6adef5c4-8acb-404f-aa53-5d11e73d5f26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\Scenes">
+      <UniqueIdentifier>{5db9ecdd-44ff-49d0-b8a0-036d508a1782}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Cronous.ico">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\CloseSelected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\CloseNormal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\HelloWorld.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\Default.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\bg.mp3">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\ui_login.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\ui_login.plist">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\libs\jsoncpp\src\lib_json\json_internalarray.inl">
+      <Filter>libs\jsoncpp\src\lib_json</Filter>
+    </None>
+    <None Include="..\libs\jsoncpp\src\lib_json\json_internalmap.inl">
+      <Filter>libs\jsoncpp\src\lib_json</Filter>
+    </None>
+    <None Include="..\libs\jsoncpp\src\lib_json\json_valueiterator.inl">
+      <Filter>libs\jsoncpp\src\lib_json</Filter>
+    </None>
+    <None Include="..\Resources\loading.plist">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\loading.png">
+      <Filter>resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Cronous.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>classes</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>classes</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\jsoncpp\include\json\autolink.h">
+      <Filter>libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\jsoncpp\include\json\config.h">
+      <Filter>libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\jsoncpp\include\json\features.h">
+      <Filter>libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\jsoncpp\include\json\forwards.h">
+      <Filter>libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\jsoncpp\include\json\json.h">
+      <Filter>libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\jsoncpp\include\json\reader.h">
+      <Filter>libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\jsoncpp\include\json\value.h">
+      <Filter>libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\jsoncpp\include\json\writer.h">
+      <Filter>libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\jsoncpp\src\lib_json\json_batchallocator.h">
+      <Filter>libs\jsoncpp\src\lib_json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Network\ETSocket.h">
+      <Filter>classes\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Util\ETMessageQueue.h">
+      <Filter>classes\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Network\ETSocketClient.h">
+      <Filter>classes\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Network\ETSocketManager.h">
+      <Filter>classes\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Util\ETBuffer.h">
+      <Filter>classes\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Util\ETMacro.h">
+      <Filter>classes\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Util\ETMessage.h">
+      <Filter>classes\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\LoadingLayer.h">
+      <Filter>classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\LoginScene.h">
+      <Filter>classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\StartScene.h">
+      <Filter>classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\IntroAnimateScene.h">
+      <Filter>classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\HomeScene.h">
+      <Filter>classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\RolesScene.h">
+      <Filter>classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\LevelMapLayer.h">
+      <Filter>classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\StatusBarLayer.h">
+      <Filter>classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\FightLayer.h">
+      <Filter>classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\PersonalLayer.h">
+      <Filter>classes\Scenes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\jsoncpp\src\lib_json\json_writer.cpp">
+      <Filter>libs\jsoncpp\src\lib_json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\jsoncpp\src\lib_json\json_reader.cpp">
+      <Filter>libs\jsoncpp\src\lib_json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\jsoncpp\src\lib_json\json_value.cpp">
+      <Filter>libs\jsoncpp\src\lib_json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Network\ETSocket.cpp">
+      <Filter>classes\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Util\ETMessageQueue.cpp">
+      <Filter>classes\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Network\ETSocketClient.cpp">
+      <Filter>classes\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Network\ETSocketManager.cpp">
+      <Filter>classes\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Util\ETBuffer.cpp">
+      <Filter>classes\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Util\ETMessage.cpp">
+      <Filter>classes\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\LoadingLayer.cpp">
+      <Filter>classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\LoginScene.cpp">
+      <Filter>classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\StartScene.cpp">
+      <Filter>classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\IntroAnimateScene.cpp">
+      <Filter>classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\HomeScene.cpp">
+      <Filter>classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\RolesScene.cpp">
+      <Filter>classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\LevelMapLayer.cpp">
+      <Filter>classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\StatusBarLayer.cpp">
+      <Filter>classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\FightLayer.cpp">
+      <Filter>classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\PersonalLayer.cpp">
+      <Filter>classes\Scenes</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
