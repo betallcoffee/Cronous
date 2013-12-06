@@ -35,12 +35,14 @@ bool AppDelegate::applicationDidFinishLaunching()
     pDirector->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-	CCScene *pScene;
+	CCScene *pScene = NULL;
 	if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) {
 		pScene = LoginScene::scene();
 	} else if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) {
 		pScene = StartScene::scene();
 	} else if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) {
+		pScene = StartScene::scene();
+	} else if (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX) {
 		pScene = StartScene::scene();
 	}
 

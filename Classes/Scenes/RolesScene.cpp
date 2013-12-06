@@ -1,5 +1,5 @@
 /*
- Author : Tina
+ Author : betallcoffee
  */
 
 #include "RolesScene.h"
@@ -131,7 +131,7 @@ void RolesScene::firstRoleMenu(CCObject *pSender) {
 	if (selectRole_ == 1) {
 		return;
 	}
-	pIntroLabel_->setString("ÆëÌì´óÊ¥£ºÎäÉ®£¬ÓµÓÐ¸ßÉúÃü¸ß·ÀÓù");
+	pIntroLabel_->setString("ï¿½ï¿½ï¿½ï¿½ï¿½Ê¥ï¿½ï¿½ï¿½ï¿½É®ï¿½ï¿½Óµï¿½Ð¸ï¿½ï¿½ï¿½ï¿½ï¿½ß·ï¿½ï¿½ï¿½");
 	CCSize size = pFirstRoleMenuItem_->getContentSize();
 	pRoleFocus_->removeFromParent();
 	pRoleFocus_->setPosition(ccp(size.width/2, size.height/2));
@@ -144,7 +144,7 @@ void RolesScene::secondRoleMenu(CCObject *pSender) {
 	if (selectRole_ == 2) {
 		return;
 	}
-	pIntroLabel_->setString("Âù×åÖ®Íõ£º¿ñÕ½Ê¿£¬ÓµÓÐ¸ß¹¥»÷");
+	pIntroLabel_->setString("ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ê¿ï¿½ï¿½Óµï¿½Ð¸ß¹ï¿½ï¿½ï¿½");
 	CCSize size = pSecondRoleMenuItem_->getContentSize();
 	pRoleFocus_->removeFromParent();
 	pRoleFocus_->setPosition(ccp(size.width/2, size.height/2));
@@ -157,7 +157,7 @@ void RolesScene::thirdRoleMenu(CCObject *pSender) {
 	if (selectRole_ == 3) {
 		return;
 	}
-	pIntroLabel_->setString("¶ñÄ§Í³Ë§£ºÊõÊ¿£¬ÓµÓÐ¸ßËÙ¶È£¬¿ÉÏÈÊÖ¹¥»÷");
+	pIntroLabel_->setString("ï¿½ï¿½Ä§Í³Ë§ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Óµï¿½Ð¸ï¿½ï¿½Ù¶È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½");
 	CCSize size = pThirdRoleMenuItem_->getContentSize();
 	pRoleFocus_->removeFromParent();
 	pRoleFocus_->setPosition(ccp(size.width/2, size.height/2));

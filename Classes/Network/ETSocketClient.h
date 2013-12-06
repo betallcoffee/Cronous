@@ -1,11 +1,11 @@
 /*
- Author : Tina
+ Author : betallcoffee
  */
 
 #ifndef __ET_SOCKET_CLIENT_H__
 #define __ET_SOCKET_CLIENT_H__
 
-#include <pthread\pthread.h>
+#include <pthread.h>
 #include <string>
 #include <queue>
 

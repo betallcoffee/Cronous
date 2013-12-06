@@ -1,5 +1,5 @@
 /*
- Author : Tina
+ Author : betallcoffee
  */
 
 #ifndef __INTRO_ANIMATE_SCENE_H__

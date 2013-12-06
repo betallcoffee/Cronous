@@ -33,7 +33,7 @@ bool FightLayer::init() {
 
 void FightLayer::fightInfo() {
 	char fightInfo[100] = "";
-	sprintf(fightInfo, "当前排名:1 今日挑战剩余次数:100 ");
+	sprintf(fightInfo, ":100 ");
 	CCLabelTTF *pInfoLabel = CCLabelTTF::create(fightInfo,
 		"hycc.ttf",
 		22, 

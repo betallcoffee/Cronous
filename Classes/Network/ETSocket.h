@@ -1,5 +1,5 @@
 /*
- Author : Tina
+ Author : betallcoffee
  */
 
 #ifndef __ET_SOCKET_H__
@@ -8,7 +8,11 @@
 #ifdef WIN32
 #include <WinSock2.h>
 #else
-
+#include <sys/ioctl.h>
+#include <netdb.h>
+#include <errno.h>
+#include <sys/types.h>
+#include <sys/socket.h>
 #endif
 
 #include <string>

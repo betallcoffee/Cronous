@@ -1,5 +1,5 @@
 /*
- Author : Tina
+ Author : betallcoffee
  */
 
 #ifndef __ROLES_SCENE_H__

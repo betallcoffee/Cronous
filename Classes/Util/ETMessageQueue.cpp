@@ -1,5 +1,5 @@
 /*
- Author : Tina
+ Author : betallcoffee
  */
 
 #include "ETMessageQueue.h"

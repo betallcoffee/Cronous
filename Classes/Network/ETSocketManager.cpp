@@ -1,5 +1,5 @@
 /*
- Author : Tina
+ Author : betallcoffee
  */
 
 #include <stdio.h>
@@ -8,12 +8,17 @@
 
 ETSocketManager *ETSocketManager::pSharedInstance_ = NULL;
 
-ETSocketManager::ETSocketManager() {
+ETSocketManager::ETSocketManager()
+: pSocketClient_(NULL){
+#ifdef WIN32
 	ETSocket::startup();
+#endif
 }
 
 ETSocketManager::~ETSocketManager() {
+#ifdef WIN32
 	ETSocket::cleanup();
+#endif
 }
 
 ETSocketManager *ETSocketManager::sharedInstance() {

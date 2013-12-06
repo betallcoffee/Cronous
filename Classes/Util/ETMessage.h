@@ -1,5 +1,5 @@
 /*
- Author : Tina
+ Author : betallcoffee
  */
 
 #ifndef __ET_MESSAGE_H__
@@ -23,21 +23,21 @@ public :
 	size_t track(size_t size) { return data_.track(size); }
 	std::string content();
 
-	//Á¬½ÓÊ§°Ü
+	//ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
 	static const unsigned int kTypeSelfDeineMessageConnectFail = 0xfffffA01;
-	//ÍøÂçÒì³£ÖĞ¶Ï
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½Ğ¶ï¿½
 	static const unsigned int kTypeSelfDeineMessageConnectTerminate = 0xfffffA02;
-	//·şÎñÆ÷¹Ø±ÕÁ¬½Ó
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
 	static const unsigned int kTypeSelfDeineMessageServerCloseConnection = 0xfffffA03;
-	//ÏûÏ¢·¢²¼³öÈ¥£¨ĞÅºÅºÜ²î£©
+	//ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ÅºÅºÜ²î£©
 	static const unsigned int kTypeSelfDeineMessageConnotSendMessage = 0xfffffA04;
-	//ÌáÊ¾ÍøÂç¿ÉÄÜ³öÎÊÌâÁË
+	//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	static const unsigned int kTypeSelfDeineMessageIdelTimeout = 0xfffffA05;
-	//ÌáÊ¾ÍøÂç¿ÉÄÜ³öÎÊÌâÁË,¿ÉÒÔÍË³öµ½µÇÂ¼
+	//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Â¼
 	static const unsigned int kTypeSelfDeineMessageReconnectHint = 0xfffffA06;
-	//ÌáÊ¾ÍøÂç¿ÉÄÜ³öÎÊÌâÁË,±ØĞëÍË³öµ½µÇÂ¼
+	//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Â¼
 	static const unsigned int kTypeSelfDeineMessageReconnectForce = 0xfffffA07;
-	//´íÎóÌáÊ¾
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
 	static const unsigned int kTypeSelfDeineMessageErrorMessage = 0xfffffA08;
     //
 	static const unsigned int kTypeSelfDeineMessageClientKillMessage = 0xfffffA09;

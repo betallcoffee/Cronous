@@ -1,5 +1,5 @@
 /*
- Author : Tina
+ Author : betallcoffee
  */
 
 #ifdef WIN32
@@ -27,7 +27,7 @@ ETBuffer::~ETBuffer(void)
 
 size_t ETBuffer::read(char *buf, size_t size) {
 	size_t t = buffer_.size();
-	size = min(size, t);
+	size = std::min(size, t);
 	char *st = peek();
 	std::copy(st, st + size, buf);
 	return size;
