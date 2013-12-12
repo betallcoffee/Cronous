@@ -61,10 +61,10 @@ void ETSocket::cleanup() {
 
 #endif
 
-void ETSocket::setNonblock() {
+int ETSocket::setNonblock() {
 #ifdef WIN32
 	u_long arg = 1;
-	ioctlsocket(fd_, FIONBIO, &arg);
+	return ioctlsocket(fd_, FIONBIO, &arg);
 #else
 	/*
 	http://www.kegel.com/dkftpbench/nonblocking.html
@@ -80,7 +80,7 @@ void ETSocket::setNonblock() {
 #else
     /* Otherwise, use the old way of doing it */
     flags = 1;
-    return ioctl(fd_, FIOBIO, &flags);
+    return ioctl(fd_, FIONBIO, &flags);
 #endif
 #endif
 }
@@ -141,7 +141,7 @@ int ETSocket::listen(int backlog) {
 int ETSocket::accept() {
 	struct sockaddr_in cliaddr;
 	int addrlen = sizeof(cliaddr);
-	int ret = ::accept(fd_, (struct sockaddr*)&cliaddr, &addrlen);
+	int ret = ::accept(fd_, reinterpret_cast<struct sockaddr*>(&cliaddr), reinterpret_cast<socklen_t *>(&addrlen));
 	if (ret == 0) {
 		cliIP_ = inet_ntoa(cliaddr.sin_addr);
 		cliPort_ = ntohs(cliaddr.sin_port);
@@ -169,7 +169,7 @@ int ETSocket::getsockopt(int level, int optname, void *optval, int *optlen) {
 #ifdef WIN32
 	return ::getsockopt(fd_, level, optname, static_cast<char *>(optval), optlen);
 #else
-	return ::getsockopt(fd_, level, optname, optval, optlen);
+	return ::getsockopt(fd_, level, optname, optval, reinterpret_cast<socklen_t *>(optlen));
 #endif
 }
 

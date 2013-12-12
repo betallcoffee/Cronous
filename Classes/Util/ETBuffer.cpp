@@ -60,7 +60,7 @@ int32_t ETBuffer::readInt32() {
 
 size_t ETBuffer::write(const char *buf, size_t size) {
 	vertifySpace(size);
-	std::copy_n(buf, size, buffer_.begin() + writableIndex_);
+	std::copy(buf, buf + size, buffer_.begin() + writableIndex_);
 	writableIndex_ += size;
 	return size;
 }

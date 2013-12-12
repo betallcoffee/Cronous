@@ -14,10 +14,13 @@
 #define ASSERT_BREAK(cond)  if (!cond) { assert(cond); break; }
 #else
 #define ASSERT(cond)
-#define ASSERT_BREAK(cond) if (cond) { break; }
+#define ASSERT_BREAK(cond) if (!cond) { break; }
 #define SOCKET_ERROR (-1)
 #endif
 
 #define BREAK_IF(cond) if (cond) break
+
+typedef void (*ET_CallFuncN_t)(void *);
+#define callFuncN_point(POINT_) (ET_CallFuncN_t)(&POINT_)
 
 #endif //__ET_MACRO_H__

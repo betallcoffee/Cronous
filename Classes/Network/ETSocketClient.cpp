@@ -12,7 +12,9 @@ ETSocketClient::ETSocketClient(const std::string &host, short port)
 : host_(host),
 port_(port),
 isRunning_(false),
+sendThread_(0),
 bSendStart_(false),
+recvThread_(0),
 bRecvStart_(false){
 	pthread_mutex_init(&sendMutex_, NULL);
 	pthread_cond_init(&sendCond_, NULL);
@@ -69,7 +71,7 @@ void ETSocketClient::sendMessage(ETMessage *msg) {
 
 void *ETSocketClient::sendThreadCallFunc(void *arg) {
 	int iRet = 0;
-	ETSocketClient *self = static_cast<ETSocketClient *>(arg);
+	ETSocketClient *self = reinterpret_cast<ETSocketClient *>(arg);
 	do {	
 		BREAK_IF(!self->connectToServer());
 		BREAK_IF(!self->connectingLoop());
@@ -82,7 +84,7 @@ void *ETSocketClient::sendThreadCallFunc(void *arg) {
 
 void *ETSocketClient::recvThreadCallFunc(void *arg) {
 	int iRet = 0;
-	ETSocketClient *self = static_cast<ETSocketClient *>(arg);
+	ETSocketClient *self = reinterpret_cast<ETSocketClient *>(arg);
 	iRet = self->recvThreadLoop();
 	return (void *)iRet;
 }
@@ -104,17 +106,15 @@ bool ETSocketClient::connectToServer() {
 #ifdef WIN32
 			if (error == WSAEWOULDBLOCK) {
 #else
-			if (error == EINPROGRESS ||
-				error == EWOULDBLOCK) {
+			if (error == EINPROGRESS) {
 #endif
 				bRet = true;
 				return bRet;
 			}
 		}
-
-		bRet = false;
 	} while (false);
 
+	bRet = false;
 	socket_.close();
 	return bRet;
 }
@@ -145,9 +145,10 @@ bool ETSocketClient::connectingLoop() {
 	http://cr.yp.to/docs/connect.html
 	*/
 		if (ret > 0) {
-			if (FD_ISSET(socket_.getFD(), &writefds) {
+			if (FD_ISSET(socket_.getFD(), &writefds)) {
 				int error;
-				int iRet = socket_.ETGetsockopt(SOL_SOCKET, SO_ERROR, &error, sizeof(error));
+				int esize = sizeof(error);
+				int iRet = socket_.getsockopt(SOL_SOCKET, SO_ERROR, reinterpret_cast<void*>(&error), &esize);
 				BREAK_IF(iRet == SOCKET_ERROR || error);
 				bRet = true;
 				return bRet;
@@ -157,9 +158,9 @@ bool ETSocketClient::connectingLoop() {
 			BREAK_IF(error != EINTR);
 		}
 #endif
-
 	}
 	
+	bRet = false;
 	socket_.close();
 	return bRet;
 }
@@ -188,7 +189,7 @@ int ETSocketClient::select(fd_set *readfds, fd_set *writefds, fd_set *exceptfds)
 	FD_ZERO(writefds);
 	FD_SET(socket_.getFD(), writefds);
 	FD_ZERO(exceptfds);
-	FD_SET(socket_.getFD(),&exceptfds);
+	FD_SET(socket_.getFD(), exceptfds);
 	return ::select(socket_.getFD() + 1, readfds, writefds, exceptfds, &timeout);
 }
 

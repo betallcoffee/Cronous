@@ -18,6 +18,7 @@ public :
 
 	static ETMessage *createMessage(ETBuffer &buf);
 
+	int getCategory() { return category_; }
 	char *data() { return data_.peek(); }
 	size_t size() { return data_.size(); }
 	size_t track(size_t size) { return data_.track(size); }
@@ -52,6 +53,7 @@ private :
 	static const int8_t protoVersion_ = 9;
 	static const int32_t serverVersion_ = 0;
 
+	int category_;
 	ETBuffer data_; 
 };
 

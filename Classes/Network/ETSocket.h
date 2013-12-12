@@ -23,7 +23,7 @@ public :
 	~ETSocket();
 
 	int getFD();
-	void setNonblock();
+	int setNonblock();
 
 #ifdef WIN32
 	static void startup();

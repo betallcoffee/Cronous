@@ -80,29 +80,22 @@ void LoginScene::initUI() {
 	pMainMenu->addChild(pLoginBtnItem);
 	pLoginInputSprite->addChild(pMainMenu);
 
-//	CCScale9Sprite *pEditbg1 = CCScale9Sprite::create();
-//	pUsernameEditBox_ = CCEditBox::create(CCSizeMake(210, 50), pEditbg1);
-//	pUsernameEditBox_->setPosition(ccp(winSize.width*0.5 - 10, 96));
-//	pUsernameEditBox_->setMaxLength(8);
-//	pUsernameEditBox_->setReturnType(kKeyboardReturnTypeDone);
-//	pUsernameEditBox_->setFontSize(12);
-//	pUsernameEditBox_->setText("");
-//	//pUsernameEditBox_->setColor(ccc3(158, 122, 83));
-//	pLoginInputSprite->addChild(pUsernameEditBox_, 2);
-//
-//	CCScale9Sprite *pEditbg2 = CCScale9Sprite::create();
-//	pPasswordEditBox_ = CCEditBox::create(CCSizeMake(190, 50), pEditbg2);
-//	pPasswordEditBox_->setPosition(ccp(winSize.width*0.5 - 22, 45));
-//	pPasswordEditBox_->setMaxLength(8);
-//	pPasswordEditBox_->setReturnType(kKeyboardReturnTypeDone);
-//	pPasswordEditBox_->setFontSize(8);
-//	pPasswordEditBox_->setText("");
-//	//pPasswordEditBox_->setColor(ccc3(158, 122, 83));
-//	pLoginInputSprite->addChild(pPasswordEditBox_, 2);
+	pUsernameTextField_ = CCTextFieldTTF::textFieldWithPlaceHolder("username", "Arial", 34);
+	pUsernameTextField_->setPosition(ccp(winSize.width*0.5 - 10, 96));
+	pUsernameTextField_->setFontSize(12);
+	pUsernameTextField_->setColor(ccc3(158, 122, 83));
+	pUsernameTextField_->attachWithIME();
+	pLoginInputSprite->addChild(pUsernameTextField_, 2);
 
-	CCLabelTTF *pVersion = CCLabelTTF::create("Betallcoffee", "hycc.ttf", 18);
+	pPasswordTextField_ = CCTextFieldTTF::textFieldWithPlaceHolder("password", "Arial", 34);
+	pPasswordTextField_->setPosition(ccp(winSize.width*0.5 - 22, 45));
+	pPasswordTextField_->setFontSize(8);
+	pPasswordTextField_->setColor(ccc3(158, 122, 83));
+	pLoginInputSprite->addChild(pPasswordTextField_, 2);
+
+	CCLabelTTF *pVersion = CCLabelTTF::create("betallcoffee", "hycc.ttf", 34);
 	pVersion->setColor(ccc3(28, 42, 52));
-	pVersion->setPosition(ccp(winSize.width*0.5, winSize.height*0.5 - 90));
+	pVersion->setPosition(ccp(winSize.width*0.5, winSize.height*0.5 - 250));
 	this->addChild(pVersion);
 }
 
@@ -119,9 +112,9 @@ void LoginScene::loginMenu(CCObject *pSender) {
 	this->addChild(pLoadingLayer_);
 	this->schedule(schedule_selector(LoginScene::loginSchedule));
 	return;
-	if (strcmp(pUsernameEditBox_->getText(), "") && strcmp(pPasswordEditBox_->getText(), "")) {
-		const char *pUsername = pUsernameEditBox_->getText();
-		const char *pPassword = pPasswordEditBox_->getText();
+	if (strcmp(pUsernameTextField_->getString(), "") && strcmp(pPasswordTextField_->getString(), "")) {
+		const char *pUsername = pUsernameTextField_->getString();
+		const char *pPassword = pPasswordTextField_->getString();
 
 		int i = 0, uIllegal = 0, pIllegal = 0;
 		while (pUsername[i] != '\0') {

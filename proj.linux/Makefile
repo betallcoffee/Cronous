@@ -19,7 +19,8 @@ SOURCES = main.cpp \
 		../Classes/Scenes/PersonalLayer.cpp \
 		../Classes/Scenes/RolesScene.cpp \
 		../Classes/Scenes/StartScene.cpp \
-		../Classes/Scenes/StatusBarLayer.cpp
+		../Classes/Scenes/StatusBarLayer.cpp \
+		../Classes/Scenes/GoodSprite.cpp
 
 #SOURCES += ../Classes/Network/ETSocket.cpp \
 #		   ../Classes/Network/ETSocketClient.cpp \
@@ -27,7 +28,7 @@ SOURCES = main.cpp \
 #
 #SOURCES += ../Classes/Util/ETBuffer.cpp \
 #		   ../Classes/Util/ETMessage.cpp \
-#		   ../Classes/Util/ETMessageQueue.cpp
+#		   ../Classes/Util/ETMessageManager.cpp
 
 
 COCOS_ROOT = ../..

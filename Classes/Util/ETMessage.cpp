@@ -10,6 +10,7 @@ ETMessage::ETMessage() {
 
 ETMessage::ETMessage(int commandID, const std::string &data) {
 	initHead();
+	category_ = commandID;
 	int32_t a = data.length() + 4;
 	data_.write(a);
 	data_.write(static_cast<int32_t>(commandID));
@@ -18,6 +19,7 @@ ETMessage::ETMessage(int commandID, const std::string &data) {
 
 ETMessage::ETMessage(int commandID, const char *data, size_t size) {
 	initHead();
+	category_ = commandID;
 	int32_t a = size + 4;
 	data_.write(a);
 	data_.write(static_cast<int32_t>(commandID));
@@ -28,8 +30,10 @@ ETMessage::~ETMessage() {
 }
 
 ETMessage *ETMessage::createMessage(ETBuffer &buf) {
-	buf.track(17);
-	ETMessage *msg = new ETMessage(101, buf.peek(), buf.size());
+	buf.track(13);
+	int32_t commandID = buf.readInt32();
+	buf.track(4);
+	ETMessage *msg = new ETMessage(commandID, buf.peek(), buf.size());
 	return msg;
 }
 
